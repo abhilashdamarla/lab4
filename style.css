@@ -1,0 +1,224 @@
+body{
+    background: url(images/background.png)
+}
+.container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "header header header header"
+    "menu menu menu menu"
+    "banner banner banner banner"
+    "banner banner banner banner"
+    "title title title title"
+    "products products products products"
+    "offers offers offers offers"
+    "services services services services"
+    "footer footer footer footer";
+}
+
+.header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    align-items: center;
+    height: 100px;
+    padding: 10px 20px;
+    background-color: #0D47A1;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.logo img {
+    width: 180px;
+    height: 60px;
+    object-fit: contain;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.search input[type="text"] {
+    width: 350px;
+    height: 38px;
+    padding: 8px;
+    border: none;
+}
+.search input[type="submit"] {
+    height: 38px;
+    padding: 0 15px;
+    border: none;
+    background-color: #FFB300;
+    cursor: pointer;
+}
+.account {
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+}
+.categories {
+grid-area: menu;
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+align-items: center;
+height: 50px;
+background-color: #f4f5f6;
+color: #333;
+text-align: center;
+}
+.categories div {
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+cursor: pointer;
+}
+.categories div a{
+text-decoration: none;
+}
+.categories div:hover {
+background-color: #1d56ab;
+}
+.banner img {
+display: block;
+width: 100%;
+height: 350px;
+}
+/* BANNER SLIDER */
+.slider {
+display: flex;
+width: 300%;
+animation: slide 12s infinite;
+}
+.slider img {
+width: 33.3333%;
+height: 350px;
+object-fit: cover;
+display: block;
+}
+.product-title {
+    align-items: center;
+    text-align: center;
+    color: #000000; 
+    background-color: #5b8cd6;
+}
+.services div:nth-child(1) {
+background-color: #cbd53d;
+padding: 20px;
+border-radius: 8px;
+}
+/* SLIDE ANIMATION */
+@keyframes slide {
+/* Banner 1 */
+0% {
+transform: translateX(0);
+}
+28% {
+transform: translateX(0);
+}
+/* Banner 2 */
+33% {
+transform: translateX(-33.3333%);
+}
+61% {
+transform: translateX(-33.3333%);
+}
+/* Banner 3 */
+66% {
+transform: translateX(-66.6666%);
+}
+94% {
+transform: translateX(-66.6666%);
+}
+/* Back to Banner 1 */
+100% {
+transform: translateX(0);
+}
+}
+
+/* PRODUCTS */
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+.product{
+    width: 100%;
+    text-align: center;
+}
+.product img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+.services div:nth-child(4) {
+background-color: #cbd53d;
+padding: 20px;
+border-radius: 8px;
+}
+/* Keep product names on a single line with ellipsis when too long */
+.product .product-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+}
+.offers { 
+ 
+    grid-area: offers; 
+ 
+    background-color: #FFF176; 
+ 
+    text-align: center; 
+ 
+    padding: 20px; 
+} 
+ 
+.offers h2 { 
+ 
+    margin-bottom: 15px; 
+} 
+ 
+.offers p { 
+ 
+    margin: 10px; 
+}
+.services { 
+ 
+    grid-area: services; 
+ 
+    display: grid; 
+ 
+    grid-template-columns: repeat(4, 1fr); 
+background-color: #E8F5E9; 
+text-align: center; 
+padding: 25px; 
+}
+.services div:nth-child(4) {
+background-color: #cbd53d;
+padding: 20px;
+border-radius: 8px;
+}
+.services div:nth-child(1) {
+background-color: #2cf08b;
+padding: 20px;
+border-radius: 8px;
+}
+.services div:nth-child(2) {
+background-color: #314d8b;
+padding: 20px;
+border-radius: 8px;
+}
+.services div:nth-child(3) {
+background-color: #95e1d3;
+padding: 20px;
+border-radius: 8px;
+}
